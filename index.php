@@ -76,63 +76,67 @@
             </div>
         </div>
 
-
         <div class="jumbotron" id="generator">
             <h4>XKCD Password Generator</h4>
-
-
-            <p class="lead">
-            </p>
 
             <p>
 
             <div class="bs-example">
                 <form>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <input class="form-control input-lg" placeholder="Click Generate to Create Password" type="text" readonly>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input class="form-control input-lg" placeholder="Click Generate to Create Password" type="text" readonly>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <h5>Number of Words: </h5><input class="form-control input-lg" placeholder="5">
-                        </div>
-                    
-                        <div class="col-md-3">
-                            <h5>Special Character:</h5><select  class="form-control input-lg">
-                            <option>None</option>
-                            <option>!</option>
-                            <option>@</option>
-                            <option>#</option>
-                            <option>$</option>
-                            <option>%</option>
-                            <option>^</option>
-                            <option>&</option>
-                            <option>*</option>
-                            <option>+</option>
-                            </select>    
-                        </div>
-                        <div class="col-xs-3">
-                            <h5>Case:</h5><select  class="form-control input-lg">
-                            <option>lower</option>
-                            <option>UPPER</option>
-                            <option>CamelCase</option>                            
-                            </select>
-                        </div>
-                        <div class="col-xs-3">
-                            <h5>Number?</h5><input type="checkbox" class="form-control">                           
-                            </select>
-                        </div>
-                    </div> 
-                                                      
+                        <div class="row">
+                            <div class="col-md-6">                    
+                                <h5>Number of Words: </h5><input class="form-control input-lg" placeholder="5">
+                            </div>   
+                            
+                            <div class="col-md-6"> 
+                             <h5>Special Character:</h5><select  class="form-control input-lg">
+                             <option>None</option>
+                             <option>!</option>
+                             <option>@</option>
+                             <option>#</option>
+                             <option>$</option>
+                             <option>%</option>
+                             <option>^</option>
+                             <option>&</option>
+                             <option>*</option>
+                             <option>+</option>
+                             </select>    
+                            </div>
+                        </div>    
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Case:</h5><select  class="form-control input-lg">
+                                <option>lower</option>
+                                <option>UPPER</option>
+                                <option>CamelCase</option>                            
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">                            
+                                <h5>Number?</h5><select  class="form-control input-lg">
+                                <option>Yes</option>
+                                <option>No</option>
+                                </select>
+                            </div> 
+                        </div>               
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a class="btn btn-lg btn-success" href="./logic.php">Generate</a>       
+                            </div>
+                        </div>    
                 </form>
             </div>            
             <br>
-            <p><a class="btn btn-lg btn-success" href=
-            "./logic.php">Generate</a>
+            <p>
             </p>
         </div>
-</div>
 
         <div class="container" id="contact">
             <div class="row">
