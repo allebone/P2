@@ -11,7 +11,7 @@
     <meta content="" name="description">
     <meta content="" name="author">
     <link href="./images/favicon.ico" rel="icon"><!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="./css/jumbotron-narrow.css" rel="stylesheet">
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet"
@@ -84,22 +84,49 @@
             <p class="lead">
             </p>
 
-
-            <h5>Configure your options and click Generate.</h5>
             <p>
 
             <div class="bs-example">
                 <form>
                     <div class="row">
                         <div class="col-xs-12">
-                            <input class="form-control input-lg" placeholder=
-                            "Larger input" type="text">
-                        </div>                    
+                            <input class="form-control input-lg" placeholder="Click Generate to Create Password" type="text" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <h5>Number of Words: </h5><input class="form-control input-lg" placeholder="5">
+                        </div>
+                    
+                        <div class="col-md-3">
+                            <h5>Special Character:</h5><select  class="form-control input-lg">
+                            <option>None</option>
+                            <option>!</option>
+                            <option>@</option>
+                            <option>#</option>
+                            <option>$</option>
+                            <option>%</option>
+                            <option>^</option>
+                            <option>&</option>
+                            <option>*</option>
+                            <option>+</option>
+                            </select>    
+                        </div>
+                        <div class="col-xs-3">
+                            <h5>Case:</h5><select  class="form-control input-lg">
+                            <option>lower</option>
+                            <option>UPPER</option>
+                            <option>CamelCase</option>                            
+                            </select>
+                        </div>
+                        <div class="col-xs-3">
+                            <h5>Number?</h5><input type="checkbox" class="form-control">                           
+                            </select>
+                        </div>
+                    </div> 
+                                                      
                 </form>
-		<br>
-            </div>
-            <?php echo "<h1>Test PHP Functionality</h1> " ; ?> 
-            
+            </div>            
             <br>
             <p><a class="btn btn-lg btn-success" href=
             "./logic.php">Generate</a>
