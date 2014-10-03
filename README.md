@@ -1,8 +1,8 @@
-Allebone.Me - Project One Repository
+Allebone.Me - Project Two Repository
 ===================
 
 
-Greetings.  I'm Bryan, and this is the Repository for my Project One (and ultimately the site that holds the links to my future projects.  **[Github](http://www.Github.com)** will contain the most up-to-date Commits for this project.  
+Greetings.  I'm Bryan, and this is the Repository for my Project Two (and ultimately the site that holds the links to my future projects.  **[Github](http://www.Github.com)** will contain the most up-to-date Commits for this project.  
 
 
 ----------
@@ -11,7 +11,7 @@ Greetings.  I'm Bryan, and this is the Repository for my Project One (and ultima
 URL for Project One
 -------------
 
-##**[http://p1.allebone.me](http://p1.allebone.me)**
+##**[http://p2.allebone.me](http://p1.allebone.me)**
 
 
 > **Note:**
