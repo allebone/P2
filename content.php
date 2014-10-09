@@ -3,13 +3,14 @@
                 <h4>About</h4>
 
 
-                <p>As mentioned in the comic at: <a href="http://xkcd.com/936/">http://xkcd.com/936/</a>, the XKCD method of generating passwords is based on the entropy intalled by using  </p>
+                <p><h3><?php require ('logic.php');?></p>
 
 
-                <h4></h4>
+                <h4>Demo</h4>
 
 
-                <p></p>
+                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at
+                eros. Cras mattis consectetur purus sit amet fermentum.</p>
             </div>
         </div>
 
@@ -22,7 +23,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <input class="form-control input-lg" placeholder="Click Generate to Create Password" type="text"
-                                readonly><?php require ('logic.php');?></input>
+                                readonly>
                             </div>
                         </div>
                         <div class="row">
