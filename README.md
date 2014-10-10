@@ -23,20 +23,18 @@ URL for Project One
 Project Description
 -------------------
 
-As a class requirement, this project and all subsequent projects will be Version Controlled via Git and Github. The link above will lead you my very first Project whose purpose and role is to provide links to the future projects and tell you a little about myself.  I'll let that site do that, instead of elaborating here, but some features I'd like to highlight. There is a quick-navigation menu on the right which can be opened by button and closed via "X" button. This will lead to anchored sections within the overall document, making it a single continous flowing page. 
+As a class requirement, this project demonstrates the concept of a XKCD style Password. Its usage defines two core prinicples, a easy to remember password, and secondly, a password whose entropy (length of time to automated brute force attack) is infeasible to attempt.  This demonstration, minimally, depicts a choice of number of words you'd like, generates those words randomly from a master wordlist, and attempts to modify it within the confines of your form choices.  Additions of random number, special character, and/or case types allow you to meet requirements for various other password schemes.
 
 
 Demo Information
 --------------------
-
-This project doesn't have a demo requirement, but I wanted to include the block I will utilize to store the location for future projects.  
 
 > **Presentation:** My Demo can be found at [Demo Place](http://p1.allebone.com).
 
 Additional Information
 --------------------
 
-This project requires no password or further explanation. Please look here in future projects for explanations of actions or required credentials.
+This project requires no password or further explanation. 
 
 ### Outside Dependencies and Citation
 
