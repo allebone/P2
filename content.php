@@ -9,8 +9,7 @@
                 <h4>Demo</h4>
 
 
-                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at
-                eros. Cras mattis consectetur purus sit amet fermentum.</p>
+                <p>Demo of the below page can be found at: http://demoplace</p>
             </div>
         </div>
 
@@ -19,17 +18,22 @@
 
             <p>
             <div class="bs-example">
-                <form method="POST" action="./index.php">
+                <form action=<?=basename($_SERVER['PHP_SELF'])?>" method="POST">
                         <div class="row">
                             <div class="col-md-12">
-                                <input class="form-control input-lg" placeholder="Click Generate to Create Password" type="text"
+                                <input class="form-control input-lg" placeholder="Click Generate to Create Password" type="text" value="<?php printPass(); ?>"
                                 readonly>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">                    
                                 <h5>Number of Words: </h5>
-                                <input name="numWords" class="form-control input-lg" value="5">
+                                  <input name="numWords" class="form-control input-lg"
+					type="number"
+				        min="0"
+				        max="10"
+				        step="1"
+         				value="5">
                             </div>   
                             
                             <div class="col-md-6"> 
@@ -59,8 +63,8 @@
                             </div>
 
                             <div class="col-md-6">                            
-                                <h5>Number?</h5>
-                                <select  name="number" class="form-control input-lg">
+                                <h5>Include A Number?</h5>
+                                <select name="number" class="form-control input-lg">
                                 <option>Yes</option>
                                 <option>No</option>
                                 </select>
