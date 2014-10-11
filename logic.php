@@ -1,9 +1,5 @@
 <?php
 	
-	
-	
-	function printPass() {
-
 	$numWords;
 	$specChar;
 	$caseChoice;
@@ -30,70 +26,38 @@
 
 		echo .generatePass($numWords, $addNum, $specChar, $caseChoice);
 
-	}
 
-
-	function generatePass($numWords, $addNum, $specChar, $caseChoice) {
-
-
-
-
-	if ($words = file ( './wordlist.txt' )) {
-		$selectedWords = [ ];
-		for($i = 0; $i < $numWords; $i ++) {
-			$max = count ( $words ) - 1;
-			$rand = rand ( 0, $max );
-			$word = $words [$rand];
-			array_push ( $selectedWords, $word );
-		}
-
-	}
-	
-	if ($caseChoice) {
-		foreach ( $selectedWords as $key => $value ) {
-			
-			if ($caseChoice == 'lower') {
-				$selectedWords [$key] = strtolower ( $value );
-			} else {
-				foreach ( $selectedWords as $key => $value ) {
-					
-					if ($caseChoice == 'UPPER') {
-						$selectedWords [$key] = strtoupper ( $value );
-					} else {
-						foreach ( $selectedWords as $key => $value ) {
-							$selectedWords [$key] = ucfirst ( $value );
-						}
-
-					}
-
-				}
-
+		if ($words = file ( './wordlist.txt' )) {
+			$selectedWords = [ ];
+			for($i = 0; $i < $numWords; $i ++) {
+				$max = count ( $words ) - 1;
+				$rand = rand ( 0, $max );
+				$word = $words [$rand];
+				array_push ( $selectedWords, $word );
 			}
 
 		}
-
-	}
-
 	
-	function make_password($number_of_words, $has_number, $has_symbol) {
-
-		$thepassword = "";
-		for ($i = 0; $i < $numWords; $i++) {
-			$newword=$words[rand(0, (sizeof($words)-1))];
-			$thepassword = $thepassword.$newword;
+		if ($caseChoice) {
+			foreach ( $selectedWords as $key => $value ) {
+				
+				if ($caseChoice == 'lower') {
+					$selectedWords [$key] = strtolower ( $value );
+				} else {
+					foreach ( $selectedWords as $key => $value ) {
+						
+						if ($caseChoice == 'UPPER') {
+							$selectedWords [$key] = strtoupper ( $value );
+						} else {
+							foreach ( $selectedWords as $key => $value ) {
+								$selectedWords [$key] = ucfirst ( $value );
+							}
+						}
+					}
+				}
+			}
 		}
 
-		
-		if ($has_number) {
-			$thepassword = $thepassword.rand(0,9);
-		}
+		print_r $selectedWords;
 
-		
-		if ($has_symbol) {
-			$thepassword = $thepassword.$symbols[rand(0, (sizeof($symbols)-1))];
-		}
-
-		return $thepassword;
-	}
-
-	?>
+?>

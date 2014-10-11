@@ -1,4 +1,5 @@
-        <div class="row marketing">
+
+         <div class="row marketing">
             <div class="col-lg-12" id="about">
                 <h4>About</h4>
 
@@ -7,36 +8,40 @@
 
 
                 <h4>Demo</h4>
-                    <h5></h5>
 
                 <p>Demo of the below page can be found at: http://demoplace</p>
+
             </div>
         </div>
 
         <div class="jumbotron" id="generator">
             <h4>XKCD Password Generator</h4>
+ 
 
-            <div class="bs-example">
-                <form action="<?php basename($_SERVER['PHP_SELF']) ?>" method="POST">
+
+
+                <div class="bs-example">
+                    <form action="<?=basename($_SERVER['PHP_SELF'])?>" method="POST">
                         <div class="row">
                             <div class="col-md-12">
                                 <input class="form-control input-lg" placeholder="Click Generate to Create Password" type="text" value="" readonly>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-md-6">                    
                                 <h5>Number of Words: </h5>
-                                  <input name="numWords" class="form-control input-lg"
-					                           type="number"
+                                  <input name="numWords" id="numWords" class="form-control input-lg"
+					                          type="number"
 				                              min="0"
 				                              max="10"
 				                              step="1"
          				                      value="5">
                             </div>   
                             
-                            <div class="col-md-6"> 
+                        <div class="col-md-6"> 
                              <h5>Special Character:</h5>
-                             <select  name="specChar" class="form-control input-lg">
+                             <select  name="specChar" id= "spechChar" class="form-control input-lg">
                              <option>None</option>
                              <option>!</option>
                              <option>@</option>
@@ -53,7 +58,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <h5>Case:</h5>
-                                <select  name="caseChoice" class="form-control input-lg">
+                                <select  name="caseChoice" id="caseChoice" class="form-control input-lg">
                                 <option>lower</option>
                                 <option>UPPER</option>
                                 <option>CamelCase</option>                            
@@ -62,7 +67,7 @@
 
                             <div class="col-md-6">                            
                                 <h5>Include A Number?</h5>
-                                <select name="number" class="form-control input-lg">
+                                <select name="number" id="number" class="form-control input-lg">
                                 <option>Yes</option>
                                 <option>No</option>
                                 </select>
