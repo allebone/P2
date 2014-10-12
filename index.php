@@ -1,9 +1,9 @@
-<?php 
+<?php
 
-require("header.php"); 
+require("header.php");
 
+require ("logic.php");
 require("content.php");
 
-require("footer.php"); 
-
+require("footer.php");
 ?>

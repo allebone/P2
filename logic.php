@@ -1,63 +1,53 @@
 <?php
-	
-	$numWords;
-	$specChar;
-	$caseChoice;
-	$addNum;
-	
-		if (isset ( $_POST ['numWords'] )) {
-			$numWords = $_POST ['numWords'];
-		}
 
-		
-		if (isset ( $_POST ['specChar'] )) {
-			$specChar = $_POST ['specChar'];
-		}
+$password = "";
+// check if the submit was clicked
+if (isset($_POST['submit1'])) {
 
-	
-		if (isset ( $_POST ['caseChoice'] )) {
-			$caseChoice = $_POST ['caseChoice'];
-		}
+    $numWords;
+    $specChar;
+    $caseChoice;
+    $addNum;
+    $randomNumber = "";
 
-	
-		if (isset ( $_POST ['addNum'] )) {
-			$number = $_POST ['addNum'];
-		}
+    $numWords = $_POST ['numWords'];
+    $specChar = $_POST ['specChar'];
+    $caseChoice = $_POST ['caseChoice'];
+    $addNum = $_POST ['number'];
+    //echo generatePass($numWords, $addNum, $specChar, $caseChoice);
+    // read word list
+    if ($words = file('./wordlist.txt')) {
+        $selectedWords = [];
 
-		echo .generatePass($numWords, $addNum, $specChar, $caseChoice);
+        // generate words for the password
+        for ($i = 0; $i < $numWords; $i ++) {
+            $max = count($words) - 1;
+            $rand = rand(0, $max);
+            $word = $words [$rand];
+            array_push($selectedWords, $word);
+        }
+    }
 
+    // change case of each word in the array
+    foreach ($selectedWords as $key => $value) {
+        if ($caseChoice == 'lower') {
+            $selectedWords [$key] = strtolower($value);
+        } else if ($caseChoice == 'upper') {
+            $selectedWords [$key] = strtoupper($value);
+        } else {
+            $selectedWords [$key] = ucfirst($value);
+        }
+    }
 
-		if ($words = file ( './wordlist.txt' )) {
-			$selectedWords = [ ];
-			for($i = 0; $i < $numWords; $i ++) {
-				$max = count ( $words ) - 1;
-				$rand = rand ( 0, $max );
-				$word = $words [$rand];
-				array_push ( $selectedWords, $word );
-			}
+    // generate a random number between 0 and 10
+    if ($addNum == 'true') {
+        $randomNumber = rand(0, 10);
+    }
 
-		}
-	
-		if ($caseChoice) {
-			foreach ( $selectedWords as $key => $value ) {
-				
-				if ($caseChoice == 'lower') {
-					$selectedWords [$key] = strtolower ( $value );
-				} else {
-					foreach ( $selectedWords as $key => $value ) {
-						
-						if ($caseChoice == 'UPPER') {
-							$selectedWords [$key] = strtoupper ( $value );
-						} else {
-							foreach ( $selectedWords as $key => $value ) {
-								$selectedWords [$key] = ucfirst ( $value );
-							}
-						}
-					}
-				}
-			}
-		}
-
-		print_r $selectedWords;
-
+    foreach ($selectedWords as $sword) {
+        $password .= $sword . "-";
+    }
+    $password = substr($password, 0, -1);
+    $password .= $randomNumber . $specChar;
+}
 ?>
